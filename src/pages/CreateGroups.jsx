@@ -1,9 +1,9 @@
 import { useState } from "react";
-import "./CreatePost.css";
+import "./CreateGroups.css";
 import { supabase } from "../client";
 
-const CreatePost = () => {
-  const [post, setPost] = useState({ title: "", author: "", description: "" });
+const CreateGroup = () => {
+  const [post, setPost] = useState({ name: "", size: "", description: "" });
   const [isGenerating, setIsGenerating] = useState(false);
 
   const handleChange = (event) => {
@@ -16,9 +16,19 @@ const CreatePost = () => {
     });
   };
 
-  const createPost = async (event) => {
+  const createGroup = async (event) => {
     event.preventDefault();
     setIsGenerating(true);
+
+    await supabase
+      .from("group")
+      .insert({
+        name: post.name,
+        size: post.size,
+        description: post.description,
+      })
+      .select();
+    window.location = "/view";
   };
 
   return (
@@ -43,10 +53,10 @@ const CreatePost = () => {
           onChange={handleChange}
         ></textarea>
         <br />
-        <input type="submit" value="Submit" onClick={createPost} />
+        <input type="submit" value="Submit" onClick={createGroup} />
       </form>
     </div>
   );
 };
 
-export default CreatePost;
+export default CreateGroup;
