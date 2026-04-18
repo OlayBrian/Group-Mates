@@ -41,30 +41,21 @@ The following **optional** features are implemented:
   - e.g., a pirate crew’s predicted success at commandeering a new galley
 
 
-The following **additional** features are implemented:
-
-* [ ] List anything else that you added to improve the site's functionality!
-
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![App Demo](groupmatesWalkthrough.gif)
 
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+Gif created with ezGIf.com
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Getting all the pages linked was a pain in the butt
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2026] [Brian Ribeiro]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

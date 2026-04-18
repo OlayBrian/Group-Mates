@@ -35,6 +35,9 @@ const InfoPage = () => {
       <p>{group.description}</p>
       <p>Date Created: {new Date(group.created_at).toLocaleString()}</p>
 
+      <Link to={`/edit/${group.id}`}>
+        <button>Edit Group</button>
+      </Link>
       <Link to={`/`}>
         <button>Home</button>
       </Link>
