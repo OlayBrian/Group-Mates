@@ -34,7 +34,7 @@ const ReadGroups = (props) => {
             />
           ))
       ) : (
-        <h2>{"No Challenges Yet 😞"}</h2>
+        <h2>{"No Groups Yet..."}</h2>
       )}
     </div>
   );

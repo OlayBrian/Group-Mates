@@ -4,6 +4,8 @@ import { useRoutes } from "react-router";
 import ReadGroups from "./pages/ReadGroups";
 import CreateGroups from "./pages/CreateGroups";
 import EditGroup from "./pages/EditGroup";
+import InfoPage from "./pages/InfoPage";
+
 import { Link } from "react-router";
 
 const App = () => {
@@ -21,8 +23,12 @@ const App = () => {
       element: <CreateGroups />,
     },
     {
-    path: "/edit/:id",
-    element: <EditGroup />,
+      path: "/edit/:id",
+      element: <EditGroup />,
+    },
+    {
+      path: "/info/:id",
+      element: <InfoPage />
     }
   ]);
 
