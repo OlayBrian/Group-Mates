@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Card from "../components/Card";
 import { supabase } from "../client";
+import './ReadGroups.css'
 
 const ReadGroups = (props) => {
   const [groups, setGroups] = useState([]);
@@ -10,7 +11,7 @@ const ReadGroups = (props) => {
       const { data } = await supabase
         .from("group")
         .select()
-        .order("created_at", { ascending: true });
+        .order("created_at", { ascending: false});
 
       // set state of posts
       setGroups(data);
@@ -22,7 +23,7 @@ const ReadGroups = (props) => {
     <div className="ReadGroup">
       {groups && groups.length > 0 ? (
         [...groups]
-          .sort((a, b) => a.id - b.id)
+          .sort((a, b) => b.id - a.id)
           .map((group, index) => (
             <Card
               key={group.id}

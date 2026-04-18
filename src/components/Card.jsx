@@ -7,8 +7,11 @@ import { supabase } from "../client";
 const Card = (props) => {
   return (
     <div className="Card">
+      <Link to={`/edit/${props.id}`}>
+        <button>Edit</button>
+      </Link>
       <h2 className="name">{props.name}</h2>
-      <h3 className="size">{"by " + props.size}</h3>
+      <h3 className="size">{"Size: " + props.size}</h3>
       <p className="description">{props.description}</p>
     </div>
   );

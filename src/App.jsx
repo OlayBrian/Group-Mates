@@ -3,6 +3,7 @@ import React from "react";
 import { useRoutes } from "react-router";
 import ReadGroups from "./pages/ReadGroups";
 import CreateGroups from "./pages/CreateGroups";
+import EditGroup from "./pages/EditGroup";
 import { Link } from "react-router";
 
 const App = () => {
@@ -19,6 +20,10 @@ const App = () => {
       path: "/create",
       element: <CreateGroups />,
     },
+    {
+    path: "/edit/:id",
+    element: <EditGroup />,
+    }
   ]);
 
   return (
