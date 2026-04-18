@@ -12,7 +12,7 @@ const App = () => {
   // Sets up routes
   let element = useRoutes([
     {
-      path: "/view",
+      path: "/",
       element: <ReadGroups />,
     },
     {
@@ -25,7 +25,7 @@ const App = () => {
     <div className="App">
       <div className="header">
         <h1>Group Mates 🫂</h1>
-        <Link to="/view">
+        <Link to="/">
           <button className="headerBtn"> View Groups 🔍 </button>
         </Link>
         <Link to="/create">

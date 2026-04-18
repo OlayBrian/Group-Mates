@@ -20,7 +20,7 @@ const CreateGroup = () => {
     event.preventDefault();
     setIsGenerating(true);
 
-    await supabase
+    const { data, error } = await supabase
       .from("group")
       .insert({
         name: post.name,
@@ -28,7 +28,7 @@ const CreateGroup = () => {
         description: post.description,
       })
       .select();
-    window.location = "/view";
+    window.location = "/";
   };
 
   return (
